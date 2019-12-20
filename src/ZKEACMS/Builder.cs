@@ -213,6 +213,12 @@ namespace ZKEACMS
             services.AddDbContext<CMSDbContext>();
             services.AddScoped<EasyDbContext>((provider) => provider.GetService<CMSDbContext>());
             DatabaseOption databaseOption = configuration.GetSection("Database").Get<DatabaseOption>();
+            databaseOption.DbType = DbTypes.MySql;
+            databaseOption.ConnectionString = configuration["zkdb"];
+
+
+            Console.WriteLine("zkdb:{0}", configuration["zkdb"]);
+
             DataTableAttribute.IsLowerCaseTableNames = databaseOption.IsLowerCaseTableNames;
             services.AddSingleton(databaseOption);
             #endregion

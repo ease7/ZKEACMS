@@ -18,4 +18,10 @@
     <ProjectReference Include="..\ZKEACMS.Article\ZKEACMS.Article.csproj" />
     <ProjectReference Include="..\ZKEACMS\ZKEACMS.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="zkea.plugin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

@@ -33,6 +33,8 @@ namespace Easy.Mvc.Plugin
         public IWebHostEnvironment HostingEnvironment { get; set; }
         public IEnumerable<IPluginStartup> LoadEnablePlugins(IServiceCollection serviceCollection)
         {
+            Console.WriteLine("Host:{0}", HostingEnvironment.IsDevelopment());
+
             var start = DateTime.Now;
             List<PluginInfo> availablePlugins = GetPlugins().Where(m => m.Enable && m.ID.IsNotNullAndWhiteSpace()).ToList();
             Loaders.AddRange(availablePlugins.Select(m =>
@@ -68,6 +70,8 @@ namespace Easy.Mvc.Plugin
             string modulePath = HostingEnvironment.IsDevelopment() ?
                 new DirectoryInfo(HostingEnvironment.ContentRootPath).Parent.FullName :
                 Path.Combine(HostingEnvironment.WebRootPath, PluginFolder);
+
+            Console.WriteLine("module path:{0}", modulePath);
 
             if (Directory.Exists(modulePath))
             {

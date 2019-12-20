@@ -18,5 +18,9 @@
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
     <ProjectReference Include="..\ZKEACMS\ZKEACMS.csproj" />
   </ItemGroup>
-  
+  <ItemGroup>
+    <None Update="zkea.plugin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
