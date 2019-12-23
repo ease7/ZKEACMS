@@ -18,9 +18,17 @@ RUN dotnet publish ZKEACMS.Redirection/ZKEACMS.Redirection.csproj -c Release -o 
 RUN dotnet restore ZKEACMS.SectionWidget/ZKEACMS.SectionWidget.csproj
 RUN dotnet publish ZKEACMS.SectionWidget/ZKEACMS.SectionWidget.csproj -c Release -o /app/wwwroot/Plugins/ZKEACMS.SectionWidget
 RUN dotnet restore ZKEACMS.Shop/ZKEACMS.Shop.csproj
-RUN dotnet publish ZKEACMS.Shop/ZKEACMS.Shop.csproj -c Release -o /app/wwwroot/Plugins
+RUN dotnet publish ZKEACMS.Shop/ZKEACMS.Shop.csproj -c Release -o /app/wwwroot/Plugins/ZKEACMS.Shop
 RUN dotnet restore ZKEACMS.Sitemap/ZKEACMS.Sitemap.csproj
-RUN dotnet publish ZKEACMS.Sitemap/ZKEACMS.Sitemap.csproj -c Release -o /app/wwwroot/Plugins
+RUN dotnet publish ZKEACMS.Sitemap/ZKEACMS.Sitemap.csproj -c Release -o /app/wwwroot/Plugins/ZKEACMS.Sitemap
+RUN dotnet restore ZKEACMS.SiteSearch/ZKEACMS.SiteSearch.csproj
+RUN dotnet publish ZKEACMS.SiteSearch/ZKEACMS.SiteSearch.csproj -c Release -o /app/wwwroot/Plugins/ZKEACMS.SiteSearch
+RUN dotnet restore ZKEACMS.StyleEditor/ZKEACMS.StyleEditor.csproj
+RUN dotnet publish ZKEACMS.StyleEditor/ZKEACMS.StyleEditor.csproj -c Release -o /app/wwwroot/Plugins/ZKEACMS.StyleEditor
+RUN dotnet restore ZKEACMS.TemplateImporter/ZKEACMS.TemplateImporter.csproj
+RUN dotnet publish ZKEACMS.TemplateImporter/ZKEACMS.TemplateImporter.csproj -c Release -o /app/wwwroot/Plugins/ZKEACMS.TemplateImporter
+RUN dotnet restore ZKEACMS.Updater/ZKEACMS.Updater.csproj
+RUN dotnet publish ZKEACMS.Updater/ZKEACMS.Updater.csproj -c Release -o /app/wwwroot/Plugins/ZKEACMS.Updater
 RUN dotnet restore ZKEACMS.WebHost/ZKEACMS.WebHost.csproj
 RUN dotnet publish ZKEACMS.WebHost/ZKEACMS.WebHost.csproj -c Release -o /app
 

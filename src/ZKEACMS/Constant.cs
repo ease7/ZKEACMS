@@ -166,7 +166,7 @@ namespace ZKEACMS
         }
         public static string Rank
         {
-            get { return "Community"; }
+            get { return "--"; }
         }
     }
 }

@@ -21,7 +21,7 @@
       "launchUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_URLS": "http://localhost:5000",
-        "ASPNETCORE_ENVIRONMENT": "Release",
+        "ASPNETCORE_ENVIRONMENT": "Development",
         "zkdb": "Server=localhost;port=3307;Database=ZKEACMS;User Id=root;Password=root;"
       }
     }
